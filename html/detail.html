@@ -95,17 +95,25 @@
           </div>
 
           <div class="comment mb-0 col-11">
-            <input id="comment-input" type="text" placeholder="덧글을 입력하세요." />
+            <form id="comment-form">
+              <input id="comment-input" name="comment" type="text" placeholder="댓글을 입력하세요." />
+              <div class="text-end">
+                <button class="btn btn-sm btn-light mt-1" type="reset">취소</button>
+                <button class="btn btn-sm btn-primary mt-1" type="submit">등록</button>
+              </div>
+            </form>
           </div>
         </div>
+        <div id="comment-list">
+          <div class="comment-container d-flex align-items-center col-10 pb-4 mb-4">
+            <div class="comment-image">
+              <img src="../images/profile.png" id="commenter-profile" alt="프로필 이미지" width="40" height="40" class="d-inline-block align-text-top me-3 rounded-circle" />
+            </div>
 
-        <div class="comment-container d-flex align-items-center col-10 pb-4 mb-4">
-          <div class="comment-image">
-            <img src="../images/profile.png" id="commenter-profile" alt="프로필 이미지" width="40" height="40" class="d-inline-block align-text-top me-3 rounded-circle" />
-          </div>
-
-          <p class="comment mb-0 col-11">
-            <span>이런 저런 내용의 댓글들 테스트를 위해 작성한 내용입니다. 이걸 반복문으로 넣을겁니다.</span>
+            <div class="comment mb-0 col-11">
+              <span>작성자 id</span><br />
+              <span>이런 저런 내용의 댓글들 테스트를 위해 작성한 내용입니다. 이걸 반복문으로 넣을겁니다.</span>
+            </div>
           </div>
         </div>
       </section>
