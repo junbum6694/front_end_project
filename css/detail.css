@@ -1,0 +1,22 @@
+#author-name {
+  font-size: 1.05rem;
+  font-weight: 500;
+}
+
+#recommend-bg {
+  width: 162px !important;
+}
+
+#comment-cnt {
+  border-top: 1px solid lightgray;
+}
+
+.comment-container {
+  border-bottom: 0.5px solid lightgray;
+}
+
+#comment-input {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid black;
+}
