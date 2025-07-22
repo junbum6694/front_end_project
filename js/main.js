@@ -16,10 +16,10 @@ const videos = [
     visitor: 0,
   },
   {
-    title: "aespa 에스파 'Dirty Work' MV",
-    id: "M2WTUoy4y6E",
-    thumbnail: "https://img.youtube.com/vi/M2WTUoy4y6E/0.jpg",
-    url: "https://www.youtube.com/embed/M2WTUoy4y6E?si=0PvryuJqPW2s9lXa",
+    title: "aespa 에스파 'Supernova' MV",
+    id: "phuiiNCxRMg",
+    thumbnail: "https://img.youtube.com/vi/phuiiNCxRMg/0.jpg",
+    url: "https://www.youtube.com/embed/phuiiNCxRMg?si=CwQKhtKxcjBrJzzO",
     author: "SM",
     visitor: 0,
   },
@@ -32,18 +32,18 @@ const videos = [
     visitor: 0,
   },
   {
-    title: "IVE 아이브 'ATTITUDE' MV",
-    id: "38xYeot-ciM",
-    thumbnail: "https://img.youtube.com/vi/38xYeot-ciM/0.jpg",
-    url: "https://www.youtube.com/embed/38xYeot-ciM?si=DNGg3vsvx2HT5NZq",
+    title: "IVE 아이브 'Be Alright' MV",
+    id: "gC7cURZsiH8",
+    thumbnail: "https://img.youtube.com/vi/gC7cURZsiH8/0.jpg",
+    url: "https://www.youtube.com/embed/gC7cURZsiH8?si=7TiZFY3zBgmwF2MW",
     author: "STARSHIP",
     visitor: 0,
   },
   {
-    title: "IVE 아이브 'ATTITUDE' MV",
-    id: "PGLx4V680J8",
-    thumbnail: "https://img.youtube.com/vi/PGLx4V680J8/0.jpg",
-    url: "https://www.youtube.com/embed/PGLx4V680J8?si=PZmNcmAIv4V482hl",
+    title: "IVE 아이브 '해야 (HEYA)' MV",
+    id: "07EzMbVH3QE",
+    thumbnail: "https://img.youtube.com/vi/07EzMbVH3QE/0.jpg",
+    url: "https://www.youtube.com/embed/07EzMbVH3QE?si=wigyqgKwjnF2qPPY",
     author: "STARSHIP",
     visitor: 0,
   },
@@ -65,15 +65,19 @@ const videos = [
   },
 ];
 
+$(".side-btn").on("click", function () {
+  location.href = $(this).data("ad") + ".html";
+});
+
 $(document).ready(function () {
   for (const video of videos) {
     $("#video-list").append(`
 <div class="round col-sm-1 col-md-6 col-lg-3 mb-4">
-    <div class="card h-100">
+    <div class="card h-100" data-id="${video.id}">
         <img class="thumbnail" src="${video.thumbnail}" />
         <div class="card-body d-flex">
             <div>
-                <img src="../images/${video.author + ".png"}" id="profile" alt="프로필 이미지" width="40" height="40" class="d-inline-block align-text-top me-3 rounded-circle" />
+                <img src="../images/${video.author + ".png"}" id="author" alt="프로필 이미지" width="40" height="40" class="d-inline-block align-text-top me-3 rounded-circle" />
             </div>
             <div>
                 <h5 class="card-title">${video.title}</h5>
@@ -85,4 +89,9 @@ $(document).ready(function () {
 </div>
     `);
   }
+});
+
+$(document).on("click", ".card", function () {
+  console.log("test");
+  location.href = "detail.html?id=" + $(this).data("id");
 });
