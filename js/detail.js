@@ -1,0 +1,58 @@
+const videos = [
+  {
+    title: "ITZY(있지) 'WANNABE' M/V",
+    id: "fE2h3lGlOsk",
+    url: "https://www.youtube.com/embed/fE2h3lGlOsk?si=lu2KvPRJlbk406b-",
+    author: "JYP",
+    visitor: 0,
+  },
+  {
+    title: "ITZY(있지) '달라달라' M/V",
+    id: "pNfTK39k55U",
+    url: "https://www.youtube.com/embed/pNfTK39k55U?si=j-t48TR9_GVZJSDB",
+    author: "JYP",
+    visitor: 0,
+  },
+  {
+    title: "aespa 에스파 'Dirty Work' MV",
+    id: "M2WTUoy4y6E",
+    thumbnail: "https://img.youtube.com/vi/M2WTUoy4y6E/0.jpg",
+    author: "SM",
+    visitor: 0,
+  },
+  {
+    title: "aespa 에스파 'Whiplash' MV",
+    id: "jWQx2f-CErU",
+    url: "https://www.youtube.com/embed/jWQx2f-CErU?si=NXfff1yZjlKz9TR0",
+    author: "SM",
+    visitor: 0,
+  },
+  {
+    title: "IVE 아이브 'ATTITUDE' MV",
+    id: "38xYeot-ciM",
+    url: "https://www.youtube.com/embed/38xYeot-ciM?si=DNGg3vsvx2HT5NZq",
+    author: "STARSHIP",
+    visitor: 0,
+  },
+  {
+    title: "IVE 아이브 'ATTITUDE' MV",
+    id: "PGLx4V680J8",
+    url: "https://www.youtube.com/embed/PGLx4V680J8?si=PZmNcmAIv4V482hl",
+    author: "STARSHIP",
+    visitor: 0,
+  },
+  {
+    title: "NMIXX(엔믹스) 'KNOW ABOUT ME' M/V",
+    id: "aFrQIJ5cbRc",
+    url: "https://www.youtube.com/embed/aFrQIJ5cbRc?si=a6-XEREXhxVhvhDw",
+    author: "JYP",
+    visitor: 0,
+  },
+  {
+    title: "NMIXX 'DASH' M/V",
+    id: "7UecFm_bSTU",
+    url: "https://www.youtube.com/embed/7UecFm_bSTU?si=Xxv7SR3KGLvl3x7z",
+    author: "JYP",
+    visitor: 0,
+  },
+];

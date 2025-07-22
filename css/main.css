@@ -1,0 +1,60 @@
+/* navbar CSS */
+#search {
+  max-width: 30%;
+  height: 80%;
+}
+
+/* aside CSS */
+aside {
+  position: fixed;
+  top: 67px;
+  left: 0;
+  width: 70px;
+  height: 100vh;
+  padding: 20px 10px;
+  border-right: 1px solid #dee2e6;
+}
+
+.side-button {
+  width: 50px;
+  height: 90px;
+  padding: 0px;
+  margin-bottom: 5px;
+  align-items: center;
+}
+
+.icon {
+  width: 40px;
+  height: 40px;
+}
+
+/* 영상 목록 CSS */
+main {
+  margin-left: 70px;
+  margin-top: 70px;
+}
+
+section {
+  margin-top: 20px;
+}
+
+#card-container {
+  padding: 0px 20px;
+}
+
+.card {
+  border-radius: 10px;
+  border: none;
+}
+
+.card:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  transition: all 0.3s ease;
+  border: 1px solid lightslategray;
+}
+
+.thumbnail {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
