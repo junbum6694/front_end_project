@@ -2,11 +2,13 @@
 const params = new URLSearchParams(location.search);
 const id = params.get("id");
 const matched = videos.find((video) => video.id == id);
+const creator = creators.find((creator) => creator.name == matched.author);
 
 $("#video").attr("src", matched.url);
 $("#video-title").text(matched.title);
 $("#author-profile").attr("src", "../images/" + matched.author + ".png");
 $("#author-name").text(matched.author);
+$("#subscriber").text("구독자 " + creator.subscriber);
 
 function writeComment(comment) {
   $("#comment-list").prepend(`

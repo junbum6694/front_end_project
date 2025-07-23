@@ -6,7 +6,7 @@ const videos = [
     thumbnail: "https://img.youtube.com/vi/fE2h3lGlOsk/0.jpg",
     url: "https://www.youtube.com/embed/fE2h3lGlOsk?autoplay=1&mute=1",
     author: "JYP",
-    visitor: 0,
+    visitor: "5.6억회",
     date: "2020-03-09",
   },
   {
@@ -15,7 +15,7 @@ const videos = [
     thumbnail: "https://img.youtube.com/vi/pNfTK39k55U/0.jpg",
     url: "https://www.youtube.com/embed/pNfTK39k55U?autoplay=1&mute=1",
     author: "JYP",
-    visitor: 0,
+    visitor: "3.3억회",
     date: "2019-02-11",
   },
   {
@@ -24,7 +24,7 @@ const videos = [
     thumbnail: "https://img.youtube.com/vi/phuiiNCxRMg/0.jpg",
     url: "https://www.youtube.com/embed/phuiiNCxRMg?autoplay=1&mute=1",
     author: "SM",
-    visitor: 0,
+    visitor: "2억회",
     date: "2024-05-13",
   },
   {
@@ -33,7 +33,7 @@ const videos = [
     thumbnail: "https://img.youtube.com/vi/jWQx2f-CErU/0.jpg",
     url: "https://www.youtube.com/embed/jWQx2f-CErU?autoplay=1&mute=1",
     author: "SM",
-    visitor: 0,
+    visitor: "2억회",
     date: "2024-10-21",
   },
   {
@@ -42,7 +42,7 @@ const videos = [
     thumbnail: "https://img.youtube.com/vi/gC7cURZsiH8/0.jpg",
     url: "https://www.youtube.com/embed/gC7cURZsiH8?autoplay=1&mute=1",
     author: "STARSHIP",
-    visitor: 0,
+    visitor: "236만회",
     date: "2025-07-16",
   },
   {
@@ -51,7 +51,7 @@ const videos = [
     thumbnail: "https://img.youtube.com/vi/07EzMbVH3QE/0.jpg",
     url: "https://www.youtube.com/embed/07EzMbVH3QE?autoplay=1&mute=1",
     author: "STARSHIP",
-    visitor: 0,
+    visitor: "8953만회",
     date: "2024-04-29",
   },
   {
@@ -60,7 +60,7 @@ const videos = [
     thumbnail: "https://img.youtube.com/vi/aFrQIJ5cbRc/0.jpg",
     url: "https://www.youtube.com/embed/aFrQIJ5cbRc?autoplay=1&mute=1",
     author: "JYP",
-    visitor: 0,
+    visitor: "3269만회",
     date: "2025-03-17",
   },
   {
@@ -69,7 +69,7 @@ const videos = [
     thumbnail: "https://img.youtube.com/vi/7UecFm_bSTU/0.jpg",
     url: "https://www.youtube.com/embed/7UecFm_bSTU?autoplay=1&mute=1",
     author: "JYP",
-    visitor: 0,
+    visitor: "4031만회",
     date: "2024-01-15",
   },
   {
@@ -78,7 +78,7 @@ const videos = [
     thumbnail: "https://img.youtube.com/vi/jUyoZsP6C64/0.jpg",
     url: "https://www.youtube.com/embed/jUyoZsP6C64?autoplay=1&mute=1",
     author: "취미로 요리하는 남자",
-    visitor: 0,
+    visitor: "14만회",
     date: "2025-07-20",
   },
   {
@@ -87,7 +87,7 @@ const videos = [
     thumbnail: "https://img.youtube.com/vi/1ElI2b82-kY/0.jpg",
     url: "https://www.youtube.com/embed/1ElI2b82-kY?autoplay=1&mute=1",
     author: "취미로 요리하는 남자",
-    visitor: 0,
+    visitor: "27만회",
     date: "2025-07-08",
   },
   {
@@ -96,7 +96,7 @@ const videos = [
     thumbnail: "https://img.youtube.com/vi/MLlrpl57hds/0.jpg",
     url: "https://www.youtube.com/embed/MLlrpl57hds?autoplay=1&mute=1",
     author: "취미로 요리하는 남자",
-    visitor: 0,
+    visitor: "30만회",
     date: "2025-04-23",
   },
   {
@@ -105,7 +105,7 @@ const videos = [
     thumbnail: "https://img.youtube.com/vi/W-_hy7S9o0g/0.jpg",
     url: "https://www.youtube.com/embed/W-_hy7S9o0g?autoplay=1&mute=1",
     author: "취미로 요리하는 남자",
-    visitor: 0,
+    visitor: "41만회",
     date: "2025-01-27",
   },
   {
@@ -114,7 +114,7 @@ const videos = [
     thumbnail: "https://img.youtube.com/vi/KLKD9Gb0Gow/0.jpg",
     url: "https://www.youtube.com/embed/KLKD9Gb0Gow?autoplay=1&mute=1",
     author: "1분요리 뚝딱이형",
-    visitor: 0,
+    visitor: "13민회",
     date: "2025-07-15",
   },
   {
@@ -123,7 +123,7 @@ const videos = [
     thumbnail: "https://img.youtube.com/vi/5HNk-P46ZBE/0.jpg",
     url: "https://www.youtube.com/embed/5HNk-P46ZBE?autoplay=1&mute=1",
     author: "1분요리 뚝딱이형",
-    visitor: 0,
+    visitor: "3.9만회",
     date: "2025-07-07",
   },
   {
@@ -132,7 +132,7 @@ const videos = [
     thumbnail: "https://img.youtube.com/vi/yT5Q-DCh5_o/0.jpg",
     url: "https://www.youtube.com/embed/yT5Q-DCh5_o?autoplay=1&mute=1",
     author: "1분요리 뚝딱이형",
-    visitor: 0,
+    visitor: "3.9만회",
     date: "2025-06-16",
   },
   {
@@ -141,7 +141,7 @@ const videos = [
     thumbnail: "https://img.youtube.com/vi/g8LlRTgmnoU/0.jpg",
     url: "https://www.youtube.com/embed/g8LlRTgmnoU?autoplay=1&mute=1",
     author: "1분요리 뚝딱이형",
-    visitor: 0,
+    visitor: "7만회",
     date: "2025-06-01",
   },
 ];
