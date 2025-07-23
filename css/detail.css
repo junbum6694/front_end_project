@@ -1,3 +1,4 @@
+/* 영상 정보 CSS */
 #author-name {
   font-size: 1.05rem;
   font-weight: 500;
@@ -7,16 +8,43 @@
   width: 162px !important;
 }
 
+/* 댓글 CSS */
 #comment-cnt {
   border-top: 1px solid lightgray;
 }
 
 .comment-container {
   border-bottom: 0.5px solid lightgray;
+  position: relative;
 }
 
 #comment-input {
   width: 100%;
   border: none;
   border-bottom: 1px solid black;
+}
+.reset-btn {
+  background-color: rgb(185, 185, 185);
+}
+
+.submit-btn {
+  background-color: #7fb0f1;
+}
+.reset-btn:hover {
+  background-color: rgb(107, 107, 107);
+  color: white;
+}
+
+.submit-btn:hover {
+  background-color: rgb(185, 185, 185);
+  background-color: #0556bf;
+  color: white;
+}
+
+.delete-btn {
+  border: none;
+  background-color: white;
+  position: absolute;
+  top: -20%;
+  right: 0;
 }

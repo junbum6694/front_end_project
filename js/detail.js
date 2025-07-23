@@ -88,6 +88,9 @@ function writeComment(comment) {
         <span>${authentication.nickname}</span><br />
         <span>${comment}</span>
     </div>
+    <button class="delete-btn">
+      <i class="bi bi-trash3"></i>
+    </button>
 </div>
   `);
 }
@@ -102,5 +105,12 @@ $("#comment-form").on("submit", function (e) {
   } else {
     writeComment(comment);
     $("#comment-input").val("");
+  }
+});
+
+$(document).on("click", ".delete-btn", function () {
+  const check = window.confirm("정말 삭제하시겠습니까?");
+  if (check) {
+    $(this).closest(".comment-container").remove();
   }
 });
