@@ -15,6 +15,7 @@
     <link href="../css/detail.css" rel="stylesheet" />
   </head>
   <body>
+    <!-- Header(Navbar) -->
     <header>
       <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-white">
         <div class="container-fluid">
@@ -30,18 +31,22 @@
               </button>
             </div>
           </div>
-
-          <img src="../images/profile.png" id="profile" alt="프로필 이미지" width="40" height="40" class="d-inline-block align-text-top me-3 rounded-circle" />
+          <div class="d-flex align-items-center">
+            <p class="mb-0 me-2 align-text-center">TooMuchTalker님</p>
+            <img src="../images/profile.png" id="profile" alt="프로필 이미지" width="40" height="40" class="d-inline-block align-text-top me-3 rounded-circle" />
+          </div>
         </div>
       </nav>
     </header>
-
+    <!-- Aside -->
     <aside class="">
-      <button data-ad="main" class="side-btn btn btn-light border-0 d-flex align-items-center justify-content-center">
+      <button data-ad="main" class="side-btn btn btn-light border-0">
         <img class="icon" src="../images/home2.png" />
+        <p class="mb-0">home</p>
       </button>
-      <button data-ad="subscribe" class="side-btn btn btn-light border-0 d-flex align-items-center justify-content-center">
+      <button data-ad="subscribe" class="side-btn btn btn-light border-0">
         <img class="icon" src="../images/sub1.png" />
+        <p class="mb-0">구독</p>
       </button>
     </aside>
 
