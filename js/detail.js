@@ -45,3 +45,80 @@ $(document).on("click", ".delete-btn", function () {
     $(this).closest(".comment-container").remove();
   }
 });
+
+// 추천
+let check = 0;
+//0 >> 추천X 상태
+//1 >> 추천O 상태
+//2 >> 비추천O 상태
+$("#up-btn").on("click", function () {
+  let number = parseInt($("#up-btn").text(), 10);
+  switch (check) {
+    case 0:
+      $("#up-btn").html(`
+        <i class="bi bi-hand-thumbs-up-fill"></i>
+          <span class="ms-1">${number + 1}</span>
+      `);
+      $("#down-btn").html(`
+        <i class="bi bi-hand-thumbs-down"></i>
+      `);
+      check = 1;
+      break;
+    case 1:
+      $("#up-btn").html(`
+        <i class="bi bi-hand-thumbs-up"></i>
+          <span class="ms-1">${number + -1}</span>
+      `);
+      $("#down-btn").html(`
+        <i class="bi bi-hand-thumbs-down"></i>
+      `);
+      check = 0;
+      break;
+    case 2:
+      check = 1;
+      $("#up-btn").html(`
+        <i class="bi bi-hand-thumbs-up-fill"></i>
+          <span class="ms-1">${number + 1}</span>
+      `);
+      $("#down-btn").html(`
+        <i class="bi bi-hand-thumbs-down"></i>
+      `);
+      break;
+  }
+});
+
+$("#down-btn").on("click", function () {
+  let number = parseInt($("#up-btn").text(), 10);
+  switch (check) {
+    case 0:
+      check = 2;
+      $("#up-btn").html(`
+        <i class="bi bi-hand-thumbs-up"></i>
+          <span class="ms-1">${number}</span>
+      `);
+      $("#down-btn").html(`
+        <i class="bi bi-hand-thumbs-down-fill"></i>
+      `);
+      break;
+    case 1:
+      check = 2;
+      $("#up-btn").html(`
+        <i class="bi bi-hand-thumbs-up"></i>
+          <span class="ms-1">${number - 1}</span>
+      `);
+      $("#down-btn").html(`
+        <i class="bi bi-hand-thumbs-down-fill"></i>
+      `);
+      break;
+    case 2:
+      check = 0;
+      $("#up-btn").html(`
+        <i class="bi bi-hand-thumbs-up"></i>
+          <span class="ms-1">${number}</span>
+      `);
+      $("#down-btn").html(`
+        <i class="bi bi-hand-thumbs-down"></i>
+      `);
+      break;
+  }
+});
