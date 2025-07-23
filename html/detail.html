@@ -67,16 +67,16 @@
       <section id="info" class="m-4">
         <h3 id="video-title">제목</h3>
         <div class="row">
-          <div class="col-lg-2 col-md-4 d-flex align-items-center">
+          <div class="col-lg-4 col-md-4 d-flex align-items-center">
             <div>
-              <img src="../images/JYP.png" id="author-profile" alt="프로필 이미지" width="40" height="40" class="d-inline-block align-text-top me-3 rounded-circle" />
+              <img src="#" id="author-profile" alt="프로필 이미지" width="40" height="40" class="d-inline-block align-text-top me-3 rounded-circle" />
             </div>
             <p id="author-name" class="mb-0">작성자 이름</p>
           </div>
-          <div class="col-lg-2 col-md-4">
-            <div id="recommend-bg" class="d-flex align-items-center bg-light text-white rounded-pill py-1">
+          <div class="col-lg-4 col-md-4">
+            <div id="recommend-bg" class="d-flex align-items-center text-white rounded-pill py-1">
               <!-- 좋아요 -->
-              <button type="button" class="btn btn-light d-flex align-items-center ms-3 me-2">
+              <button type="button" id="up-btn" class="btn d-flex align-items-center ms-3 me-2">
                 <i class="bi bi-hand-thumbs-up"></i>
                 <span class="ms-1">448</span>
               </button>
@@ -85,7 +85,7 @@
               <div class="vr bg-secondary mx-1"></div>
 
               <!-- 싫어요 -->
-              <button type="button" class="btn btn-light d-flex align-items-center">
+              <button type="button" id="down-btn" class="btn d-flex align-items-center">
                 <i class="bi bi-hand-thumbs-down"></i>
               </button>
             </div>
@@ -132,6 +132,7 @@
       crossorigin="anonymous"
     ></script>
     <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js" integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" crossorigin="anonymous"></script>
+    <script src="../js/common.js"></script>
     <script src="../js/detail.js"></script>
   </body>
 </html>
