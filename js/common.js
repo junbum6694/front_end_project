@@ -7,6 +7,7 @@ const videos = [
     url: "https://www.youtube.com/embed/fE2h3lGlOsk?autoplay=1&mute=1",
     author: "JYP",
     visitor: 0,
+    date: "2020-03-09",
   },
   {
     title: "ITZY(있지) '달라달라' M/V",
@@ -15,6 +16,7 @@ const videos = [
     url: "https://www.youtube.com/embed/pNfTK39k55U?autoplay=1&mute=1",
     author: "JYP",
     visitor: 0,
+    date: "2019-02-11",
   },
   {
     title: "aespa 에스파 'Supernova' MV",
@@ -23,6 +25,7 @@ const videos = [
     url: "https://www.youtube.com/embed/phuiiNCxRMg?autoplay=1&mute=1",
     author: "SM",
     visitor: 0,
+    date: "2024-05-13",
   },
   {
     title: "aespa 에스파 'Whiplash' MV",
@@ -31,6 +34,7 @@ const videos = [
     url: "https://www.youtube.com/embed/jWQx2f-CErU?autoplay=1&mute=1",
     author: "SM",
     visitor: 0,
+    date: "2024-10-21",
   },
   {
     title: "IVE 아이브 'Be Alright' MV",
@@ -39,6 +43,7 @@ const videos = [
     url: "https://www.youtube.com/embed/gC7cURZsiH8?autoplay=1&mute=1",
     author: "STARSHIP",
     visitor: 0,
+    date: "2025-07-16",
   },
   {
     title: "IVE 아이브 '해야 (HEYA)' MV",
@@ -47,6 +52,7 @@ const videos = [
     url: "https://www.youtube.com/embed/07EzMbVH3QE?autoplay=1&mute=1",
     author: "STARSHIP",
     visitor: 0,
+    date: "2024-04-29",
   },
   {
     title: "NMIXX(엔믹스) 'KNOW ABOUT ME' M/V",
@@ -55,6 +61,7 @@ const videos = [
     url: "https://www.youtube.com/embed/aFrQIJ5cbRc?autoplay=1&mute=1",
     author: "JYP",
     visitor: 0,
+    date: "2025-03-17",
   },
   {
     title: "NMIXX 'DASH' M/V",
@@ -63,6 +70,7 @@ const videos = [
     url: "https://www.youtube.com/embed/7UecFm_bSTU?autoplay=1&mute=1",
     author: "JYP",
     visitor: 0,
+    date: "2024-01-15",
   },
   {
     title: "집들이 킹크랩 코스요리. 그런데 이제 대사가 조금 많은…",
@@ -71,6 +79,7 @@ const videos = [
     url: "https://www.youtube.com/embed/jUyoZsP6C64?autoplay=1&mute=1",
     author: "취미로 요리하는 남자",
     visitor: 0,
+    date: "2025-07-20",
   },
   {
     title: "조금 미친 아저씨들의 요리모임",
@@ -79,6 +88,7 @@ const videos = [
     url: "https://www.youtube.com/embed/1ElI2b82-kY?autoplay=1&mute=1",
     author: "취미로 요리하는 남자",
     visitor: 0,
+    date: "2025-07-08",
   },
   {
     title: "아저씨들이 만드는 6시간 코스요리",
@@ -87,6 +97,7 @@ const videos = [
     url: "https://www.youtube.com/embed/MLlrpl57hds?autoplay=1&mute=1",
     author: "취미로 요리하는 남자",
     visitor: 0,
+    date: "2025-04-23",
   },
   {
     title: "대대방어! 이걸 내가 할 수 있을까..? 일단 오마카세 열었습니다.",
@@ -95,6 +106,7 @@ const videos = [
     url: "https://www.youtube.com/embed/W-_hy7S9o0g?autoplay=1&mute=1",
     author: "취미로 요리하는 남자",
     visitor: 0,
+    date: "2025-01-27",
   },
   {
     title: "더워 죽겠는데 무슨 요리를 하세요. 딱 5초 만에 양념하는 방법",
@@ -103,6 +115,7 @@ const videos = [
     url: "https://www.youtube.com/embed/KLKD9Gb0Gow?autoplay=1&mute=1",
     author: "1분요리 뚝딱이형",
     visitor: 0,
+    date: "2025-07-15",
   },
   {
     title: "한낱 두부 따위가 고기보다 더 맛있는데?",
@@ -111,6 +124,7 @@ const videos = [
     url: "https://www.youtube.com/embed/5HNk-P46ZBE?autoplay=1&mute=1",
     author: "1분요리 뚝딱이형",
     visitor: 0,
+    date: "2025-07-07",
   },
   {
     title: "이걸 이제 알았다면… 지금껏 완전 손해 보신 겁니다.",
@@ -119,6 +133,7 @@ const videos = [
     url: "https://www.youtube.com/embed/yT5Q-DCh5_o?autoplay=1&mute=1",
     author: "1분요리 뚝딱이형",
     visitor: 0,
+    date: "2025-06-16",
   },
   {
     title: "아는 동생 가게에 메뉴를 하나 만들어줬는데 접시까지 핥아먹더라고요...",
@@ -127,6 +142,7 @@ const videos = [
     url: "https://www.youtube.com/embed/g8LlRTgmnoU?autoplay=1&mute=1",
     author: "1분요리 뚝딱이형",
     visitor: 0,
+    date: "2025-06-01",
   },
 ];
 
