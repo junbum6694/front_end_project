@@ -10,6 +10,8 @@ section {
 .card {
   border-radius: 10px;
   border: none;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .card:hover {
