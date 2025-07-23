@@ -65,13 +65,19 @@ const videos = [
   },
 ];
 
+//페이지 이동
 $(".side-btn").on("click", function () {
   location.href = $(this).data("ad") + ".html";
 });
 
-$(document).ready(function () {
-  for (const video of videos) {
-    $("#video-list").append(`
+//영상 카드 클릭 시 detail로 이동
+$(document).on("click", ".card", function () {
+  location.href = "detail.html?id=" + $(this).data("id");
+});
+
+// 영상 로드 함수
+function videoLoad(video) {
+  $("#video-list").append(`
 <div class="round col-sm-1 col-md-6 col-lg-3 mb-4">
     <div class="card h-100" data-id="${video.id}">
         <img class="thumbnail" src="${video.thumbnail}" />
@@ -87,11 +93,33 @@ $(document).ready(function () {
         </div>
     </div>
 </div>
-    `);
+  `);
+}
+
+//페이지 로드 시 영상목록 출력
+$(document).ready(function () {
+  for (const video of videos) {
+    videoLoad(video);
   }
 });
 
-$(document).on("click", ".card", function () {
-  console.log("test");
-  location.href = "detail.html?id=" + $(this).data("id");
+//검색 시 해당 영상목록 출력
+$("#search-form").on("submit", function (e) {
+  e.preventDefault();
+  const keyword = $("#search-input").val().trim();
+
+  if (keyword === "") {
+    alert("검색어를 입력하세요.");
+  } else {
+    $("#video-list").empty();
+    for (const video of videos) {
+      if (video.title.toLowerCase().includes(keyword.toLowerCase())) {
+        videoLoad(video);
+      }
+    }
+    if ($("#video-list").children().length === 0) {
+      window.alert("검색 결과가 없습니다. 초기 화면으로 돌아갑니다.");
+      location.reload();
+    }
+  }
 });
