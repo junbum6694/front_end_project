@@ -109,7 +109,7 @@ const videos = [
     id: "5HNk-P46ZBE",
     thumbnail: "https://img.youtube.com/vi/5HNk-P46ZBE/0.jpg",
     url: "https://www.youtube.com/embed/5HNk-P46ZBE?autoplay=1&mute=1",
-    author: "취미로 요리하는 남자",
+    author: "1분요리 뚝딱이형",
     visitor: 0,
   },
   {
@@ -117,7 +117,7 @@ const videos = [
     id: "yT5Q-DCh5_o",
     thumbnail: "https://img.youtube.com/vi/yT5Q-DCh5_o/0.jpg",
     url: "https://www.youtube.com/embed/yT5Q-DCh5_o?autoplay=1&mute=1",
-    author: "취미로 요리하는 남자",
+    author: "1분요리 뚝딱이형",
     visitor: 0,
   },
   {
@@ -125,8 +125,31 @@ const videos = [
     id: "g8LlRTgmnoU",
     thumbnail: "https://img.youtube.com/vi/g8LlRTgmnoU/0.jpg",
     url: "https://www.youtube.com/embed/g8LlRTgmnoU?autoplay=1&mute=1",
-    author: "취미로 요리하는 남자",
+    author: "1분요리 뚝딱이형",
     visitor: 0,
+  },
+];
+
+const creators = [
+  {
+    name: "JYP",
+    subscriber: "3070만명",
+  },
+  {
+    name: "SM",
+    subscriber: "3330만명",
+  },
+  {
+    name: "STARSHIP",
+    subscriber: "658만명",
+  },
+  {
+    name: "취미로 요리하는 남자",
+    subscriber: "141만명",
+  },
+  {
+    name: "1분요리 뚝딱이형",
+    subscriber: "303만명",
   },
 ];
 
@@ -136,6 +159,8 @@ const authentication = {
   nickname: "TooMuchTalker",
   profile: "../images/profile.png",
 };
+
+let subscribes = ["JYP", "취미로 요리하는 남자"];
 
 //aside 페이지 이동
 $(".side-btn").on("click", function () {
