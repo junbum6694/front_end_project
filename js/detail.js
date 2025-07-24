@@ -1,8 +1,64 @@
+// 시간 계산 함수
+function calculateDate(inputDate) {
+  const date = new Date(inputDate); // 문자열이든 Date든 변환
+  const today = new Date();
+  const diffMs = today - date;
+
+  if (isNaN(diffMs)) return "잘못된 날짜";
+
+  const diffMinutes = Math.floor(diffMs / (1000 * 60));
+  const diffHours = Math.floor(diffMs / (1000 * 60 * 60));
+  const diffDays = Math.floor(diffMs / (1000 * 60 * 60 * 24));
+
+  if (diffMinutes < 60) {
+    return diffMinutes + "분 전";
+  } else if (diffDays < 1) {
+    return diffHours + "시간 전";
+  } else if (diffDays < 7) {
+    return diffDays + "일 전";
+  } else if (diffDays < 30) {
+    return Math.floor(diffDays / 7) + "주 전";
+  } else if (diffDays < 365) {
+    return Math.floor(diffDays / 30) + "달 전";
+  } else {
+    return Math.floor(diffDays / 365) + "년 전";
+  }
+}
+
 //전달된 영상 id
 const params = new URLSearchParams(location.search);
 const id = params.get("id");
 const matched = videos.find((video) => video.id == id);
 const creator = creators.find((creator) => creator.name == matched.author);
+
+// 현재 영상 제외 list Load 함수
+function videoLoad(video) {
+  const diff = calculateDate(video.date);
+  $("#side-list").append(`
+<div class="row side-list-container">
+  <div class="col-4 p-0">
+    <div class="">
+      <img src="${video.thumbnail}" class="img-fluid w-100 h-100" />
+    </div>
+  </div>
+  <div class="col-8">
+    <h5 class="side-title mb-3">${video.title}</h5>
+    <p class=" side-text mb-1">${video.author}</p>
+    <p class="mb-0">
+      <span class="side-text">${video.visitor}</span>
+      <span class="side-text"> ${diff}</span>
+    </p>
+  </div>
+</div>
+  `);
+}
+
+$(document).ready(function () {
+  const notMatchedVideo = videos.filter((v) => v.id != id);
+  for (const video of notMatchedVideo) {
+    videoLoad(video);
+  }
+});
 
 $("#video").attr("src", matched.url);
 $("#video-title").text(matched.title);

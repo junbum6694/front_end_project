@@ -59,3 +59,25 @@
   top: -20%;
   right: 0;
 }
+
+/* 우측 영상 리스트 CSS */
+.right-section {
+  border-left: 1px solid lightgray;
+  overflow: scroll;
+}
+.side-list-container {
+  border-bottom: 1px solid lightgray;
+}
+
+.side-title {
+  font-size: 1rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 1; /* 최대 2줄 */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.side-text {
+  font-size: 0.7rem;
+}
