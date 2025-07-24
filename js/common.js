@@ -173,7 +173,7 @@ const creators = [
 const authentication = {
   name: "박찬호",
   nickname: "TooMuchTalker",
-  profile: "../images/profile.png",
+  profile: "../images/TooMuchTalker.png",
 };
 
 let subscribes = ["JYP", "취미로 요리하는 남자"];
@@ -189,3 +189,7 @@ $("#search-form").on("submit", function (e) {
   const keyword = $("#search-input").val().trim();
   location.href = `main.html?keyword=${keyword}`;
 });
+
+$("#profile-img").attr("src", authentication.profile);
+$("#dropdown-img").attr("src", authentication.profile);
+$("#profile-name").text(authentication.nickname);

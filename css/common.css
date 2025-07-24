@@ -13,6 +13,10 @@ nav {
   height: 80%;
 }
 
+#profile-name {
+  font-weight: bold;
+}
+
 /* aside CSS */
 aside {
   position: fixed;
