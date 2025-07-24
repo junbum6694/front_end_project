@@ -8,6 +8,7 @@ const videos = [
     author: "JYP",
     visitor: "5.6억회",
     date: "2020-03-09",
+    info: "👑 𝐈𝐓𝐙𝐘 '𝐂𝐇𝐄𝐂𝐊𝐌𝐀𝐓𝐄' 𝐏𝐑𝐄-𝐒𝐀𝐕𝐄 & 𝐏𝐑𝐄-𝐎𝐑𝐃𝐄𝐑<br>https://itzy.lnk.to/CHECKMATE",
   },
   {
     title: "ITZY(있지) '달라달라' M/V",
@@ -17,6 +18,7 @@ const videos = [
     author: "JYP",
     visitor: "3.3억회",
     date: "2019-02-11",
+    info: "👑 𝐈𝐓𝐙𝐘 '𝐂𝐇𝐄𝐂𝐊𝐌𝐀𝐓𝐄' 𝐏𝐑𝐄-𝐒𝐀𝐕𝐄 & 𝐏𝐑𝐄-𝐎𝐑𝐃𝐄𝐑<br>https://itzy.lnk.to/CHECKMATE",
   },
   {
     title: "aespa 에스파 'Supernova' MV",
@@ -26,6 +28,7 @@ const videos = [
     author: "SM",
     visitor: "2억회",
     date: "2024-05-13",
+    info: "aespa's 1st album 'Armageddon' is out!<br>Listen and download on your favorite platform: https://aespa.lnk.to/Armageddon",
   },
   {
     title: "aespa 에스파 'Whiplash' MV",
@@ -35,6 +38,7 @@ const videos = [
     author: "SM",
     visitor: "2억회",
     date: "2024-10-21",
+    info: "aespa's 1st album 'Armageddon' is out!<br>Listen and download on your favorite platform: https://aespa.lnk.to/Armageddon",
   },
   {
     title: "IVE 아이브 'Be Alright' MV",
@@ -44,6 +48,7 @@ const videos = [
     author: "STARSHIP",
     visitor: "236만회",
     date: "2025-07-16",
+    info: "■「Be Alright<br>2025年7月16日(水) 先行配信<br>配信リンク： https://ive.lnk.to/qSldSj",
   },
   {
     title: "IVE 아이브 '해야 (HEYA)' MV",
@@ -53,6 +58,7 @@ const videos = [
     author: "STARSHIP",
     visitor: "8953만회",
     date: "2024-04-29",
+    info: "Listen & Download from: https://ive.lnk.to/IVESWITCH <br>STARSHIP SQUARE (Domestic): https://bit.ly/3HtQ7GF<br>STARSHIP SQUARE (Global): https://bit.ly/3JWPxm0",
   },
   {
     title: "NMIXX(엔믹스) 'KNOW ABOUT ME' M/V",
@@ -62,6 +68,7 @@ const videos = [
     author: "JYP",
     visitor: "3269만회",
     date: "2025-03-17",
+    info: "NMIXX(엔믹스) “KNOW ABOUT ME” M/V<br>NMIXX 4th EP ‘Fe3O4: FORWARD’ Stream & Buy Now ▶ https://nmixx.lnk.to/Fe3O4FORWARD",
   },
   {
     title: "NMIXX 'DASH' M/V",
@@ -71,6 +78,7 @@ const videos = [
     author: "JYP",
     visitor: "4031만회",
     date: "2024-01-15",
+    info: "NMIXX “DASH” M/V<br>ⓒ 2024 JYP Entertainment. All Rights Reserved",
   },
   {
     title: "집들이 킹크랩 코스요리. 그런데 이제 대사가 조금 많은…",
@@ -80,6 +88,7 @@ const videos = [
     author: "취미로 요리하는 남자",
     visitor: "14만회",
     date: "2025-07-20",
+    info: "해리, 포터, 건하 가족이 집에 놀러왔어요!<br>우리 집에 오랜만에, 정말 많은 단어가 공기중에 떠다녔습니다…",
   },
   {
     title: "조금 미친 아저씨들의 요리모임",
@@ -89,6 +98,7 @@ const videos = [
     author: "취미로 요리하는 남자",
     visitor: "27만회",
     date: "2025-07-08",
+    info: "이상한 아저씨들 또 모였습니다.",
   },
   {
     title: "아저씨들이 만드는 6시간 코스요리",
@@ -98,6 +108,7 @@ const videos = [
     author: "취미로 요리하는 남자",
     visitor: "30만회",
     date: "2025-04-23",
+    info: "배가 터질 것 같은데<br>맛있어서 또 먹구...<br>모임 끝나면 2키로씩 살찌는 모임.",
   },
   {
     title: "대대방어! 이걸 내가 할 수 있을까..? 일단 오마카세 열었습니다.",
@@ -107,6 +118,7 @@ const videos = [
     author: "취미로 요리하는 남자",
     visitor: "41만회",
     date: "2025-01-27",
+    info: "오늘은 대방어를 선물받아서<br>급하게 친구들을 불러봤습니다.",
   },
   {
     title: "더워 죽겠는데 무슨 요리를 하세요. 딱 5초 만에 양념하는 방법",
@@ -116,6 +128,7 @@ const videos = [
     author: "1분요리 뚝딱이형",
     visitor: "13민회",
     date: "2025-07-15",
+    info: "랍스타맛이 나는 홍새우로 만든 새우장 레시피입니다.<br>손질된 냉동 새우는 원칙적으로 ‘가열 조리용’입니다.<br>또한 ‘가열 조리용’으로 판매되는 새우를 사용해 새우장을 만들어 판매하는 건 불법입니다.",
   },
   {
     title: "한낱 두부 따위가 고기보다 더 맛있는데?",
@@ -125,6 +138,7 @@ const videos = [
     author: "1분요리 뚝딱이형",
     visitor: "3.9만회",
     date: "2025-07-07",
+    info: "갈비양념에 넣고 볶은 두부입니다.<br>자세한 레시피는 고정 댓글에 있는 블로그를 참고해 주세요.",
   },
   {
     title: "이걸 이제 알았다면… 지금껏 완전 손해 보신 겁니다.",
@@ -134,6 +148,7 @@ const videos = [
     author: "1분요리 뚝딱이형",
     visitor: "3.9만회",
     date: "2025-06-16",
+    info: "참치회를 조금 더 맛있게 먹는 방법입니다.<br>시청해 주셔서 감사합니다",
   },
   {
     title: "아는 동생 가게에 메뉴를 하나 만들어줬는데 접시까지 핥아먹더라고요...",
@@ -143,6 +158,7 @@ const videos = [
     author: "1분요리 뚝딱이형",
     visitor: "7만회",
     date: "2025-06-01",
+    info: "미나리항정살 스테이크 레시피입니다.<br>자세한 레시피는 고정 댓글에 있는 블로그를 참고해 주세요.<br>시청해 주셔서 감사합니다.",
   },
 ];
 

@@ -72,6 +72,9 @@ $("#video-title").text(matched.title);
 $("#author-profile").attr("src", "../images/" + matched.author + ".png");
 $("#author-name").text(matched.author);
 $("#subscriber").text("구독자 " + creator.subscriber);
+$("#visitor").text(matched.visitor);
+$("#time").text(calculateDate(matched.date));
+$("#info-text2").html(matched.info);
 
 function writeComment(comment) {
   $("#comment-list").prepend(`
