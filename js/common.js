@@ -182,3 +182,10 @@ let subscribes = ["JYP", "취미로 요리하는 남자"];
 $(".side-btn").on("click", function () {
   location.href = $(this).data("ad") + ".html";
 });
+
+//검색 시 검색어를 매개변수로 main으로 이동
+$("#search-form").on("submit", function (e) {
+  e.preventDefault();
+  const keyword = $("#search-input").val().trim();
+  location.href = `main.html?keyword=${keyword}`;
+});

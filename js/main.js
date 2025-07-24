@@ -54,18 +54,8 @@ function videoLoad(video) {
   `);
 }
 
-//페이지 로드 시 영상목록 출력
-$(document).ready(function () {
-  for (const video of videos) {
-    videoLoad(video);
-  }
-});
-
-//검색 시 해당 영상목록 출력
-$("#search-form").on("submit", function (e) {
-  e.preventDefault();
-  const keyword = $("#search-input").val().trim();
-
+//검색된 영상 로드 함수
+function loadSearchList(keyword) {
   if (keyword === "") {
     alert("검색어를 입력하세요.");
   } else {
@@ -76,8 +66,22 @@ $("#search-form").on("submit", function (e) {
       }
     }
     if ($("#video-list").children().length === 0) {
-      window.alert("검색 결과가 없습니다. 초기 화면으로 돌아갑니다.");
+      window.alert("검색 결과가 없습니다. 영상 목록으로 이동합니다.");
       location.reload();
     }
+  }
+}
+
+//페이지 로드 시 영상목록 출력
+$(document).ready(function () {
+  const params = new URLSearchParams(location.search);
+  const keyword = params.get("keyword");
+  if (keyword === null) {
+    for (const video of videos) {
+      videoLoad(video);
+    }
+  } else {
+    loadSearchList(keyword);
+    $("#search-input").val(keyword);
   }
 });
