@@ -35,14 +35,14 @@ const creator = creators.find((creator) => creator.name == matched.author);
 function videoLoad(video) {
   const diff = calculateDate(video.date);
   $("#side-list").append(`
-<div class="row side-list-container">
+<div class="row side-list-container" data-id="${video.id}">
   <div class="col-4 p-0">
     <div class="">
       <img src="${video.thumbnail}" class="img-fluid w-100 h-100" />
     </div>
   </div>
   <div class="col-8">
-    <h5 class="side-title mb-3">${video.title}</h5>
+    <h5 class="side-title mt-2 mb-4">${video.title}</h5>
     <p class=" side-text mb-1">${video.author}</p>
     <p class="mb-0">
       <span class="side-text">${video.visitor}</span>
@@ -53,6 +53,7 @@ function videoLoad(video) {
   `);
 }
 
+//우측 영상 목록 Load
 $(document).ready(function () {
   const notMatchedVideo = videos.filter((v) => v.id != id);
   for (const video of notMatchedVideo) {
@@ -60,6 +61,12 @@ $(document).ready(function () {
   }
 });
 
+//우측 영상 목록 클릭 시 detail 페이지로 이동
+$(document).on("click", ".side-list-container", function () {
+  location.href = "detail.html?id=" + $(this).data("id");
+});
+
+//영상 id 받아와 정보 채워넣기
 $("#video").attr("src", matched.url);
 $("#video-title").text(matched.title);
 $("#author-profile").attr("src", "../images/" + matched.author + ".png");

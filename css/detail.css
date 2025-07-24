@@ -69,6 +69,13 @@
   border-bottom: 1px solid lightgray;
 }
 
+.side-list-container:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+  transition: all 0.3s ease;
+  border: 1px solid lightslategray;
+}
+
 .side-title {
   font-size: 1rem;
   display: -webkit-box;
