@@ -67,7 +67,7 @@ function loadSearchList(keyword) {
     }
     if ($("#video-list").children().length === 0) {
       window.alert("검색 결과가 없습니다. 영상 목록으로 이동합니다.");
-      location.reload();
+      location.href="main.html"
     }
   }
 }

@@ -203,7 +203,11 @@ $(".side-btn").on("click", function () {
 $("#search-form").on("submit", function (e) {
   e.preventDefault();
   const keyword = $("#search-input").val().trim();
-  location.href = `main.html?keyword=${keyword}`;
+  if (keyword === "") {
+      alert("검색어를 입력하세요.");
+    }else{
+        location.href = `main.html?keyword=${keyword}`;
+    }
 });
 
 $("#profile-img").attr("src", authentication.profile);
