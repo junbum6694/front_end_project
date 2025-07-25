@@ -192,24 +192,30 @@ const authentication = {
   profile: "../images/TooMuchTalker.png",
 };
 
-let subscribes = ["JYP", "취미로 요리하는 남자"];
+let subscribes = ["취미로 요리하는 남자", "SM", "STARSHIP"];
+
+//header, aside include
+fetch("common.html")
+  .then((response) => response.text())
+  .then((data) => {
+    document.getElementById("common").innerHTML = data;
+    $("#profile-img").attr("src", authentication.profile);
+    $("#dropdown-img").attr("src", authentication.profile);
+    $("#profile-name").text(authentication.nickname);
+  });
 
 //aside 페이지 이동
-$(".side-btn").on("click", function () {
+$(document).on("click", ".side-btn", function () {
   location.href = $(this).data("ad") + ".html";
 });
 
 //검색 시 검색어를 매개변수로 main으로 이동
-$("#search-form").on("submit", function (e) {
+$(document).on("submit", "#search-form", function (e) {
   e.preventDefault();
   const keyword = $("#search-input").val().trim();
   if (keyword === "") {
-      alert("검색어를 입력하세요.");
-    }else{
-        location.href = `main.html?keyword=${keyword}`;
-    }
+    alert("검색어를 입력하세요.");
+  } else {
+    location.href = `main.html?keyword=${keyword}`;
+  }
 });
-
-$("#profile-img").attr("src", authentication.profile);
-$("#dropdown-img").attr("src", authentication.profile);
-$("#profile-name").text(authentication.nickname);
