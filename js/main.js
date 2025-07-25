@@ -58,6 +58,11 @@ function videoLoad(video) {
 function loadSearchList(keyword) {
   if (keyword === "") {
     alert("검색어를 입력하세요.");
+  } else if (keyword === "notFoundData") {
+    $(".notFound").append(`
+      <img src="../images/notFound.jpg">
+      <p class="notFound-text">검색한 내용이 존재하지 않습니다.</p>
+    `);
   } else {
     $("#video-list").empty();
     for (const video of videos) {
@@ -66,8 +71,7 @@ function loadSearchList(keyword) {
       }
     }
     if ($("#video-list").children().length === 0) {
-      window.alert("검색 결과가 없습니다. 영상 목록으로 이동합니다.");
-      location.href="main.html"
+      location.href = "main.html?keyword=notFoundData";
     }
   }
 }
