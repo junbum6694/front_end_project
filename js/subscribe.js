@@ -28,7 +28,7 @@ function calculateDate(inputDate) {
 function videoLoad(video) {
   const diff = calculateDate(video.date);
   $(`.video-list[data-name='${video.author}']`).append(`
-<div class="round col-sm-1 col-md-6 col-lg-3 mb-4">
+<div class="round col-sm-12 col-md-6 col-lg-3 mb-4">
     <div class="card h-100" data-id="${video.id}">
         <img class="thumbnail" src="${video.thumbnail}" />
         <div class="card-body d-flex">
