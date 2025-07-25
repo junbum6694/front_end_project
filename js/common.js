@@ -202,6 +202,19 @@ fetch("common.html")
     $("#profile-img").attr("src", authentication.profile);
     $("#dropdown-img").attr("src", authentication.profile);
     $("#profile-name").text(authentication.nickname);
+
+    //사이드바 아이콘 활성화/비활성화
+    let pageName = location.pathname.split("/").pop().split(".")[0]; // 페이지 이름 가져오기
+    if (pageName === "main") {
+      $(".icon[data-ad='main']").attr("src", "../images/home2.png");
+      $(".icon[data-ad='subscribe']").attr("src", "../images/sub1.png");
+    } else if (pageName === "subscribe") {
+      $(".icon[data-ad='main']").attr("src", "../images/home1.png");
+      $(".icon[data-ad='subscribe']").attr("src", "../images/sub2.png");
+    } else if (pageName === "detail") {
+      $(".icon[data-ad='main']").attr("src", "../images/home1.png");
+      $(".icon[data-ad='subscribe']").attr("src", "../images/sub1.png");
+    }
   });
 
 //aside 페이지 이동
