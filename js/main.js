@@ -60,8 +60,9 @@ function loadSearchList(keyword) {
     alert("검색어를 입력하세요.");
   } else if (keyword === "notFoundData") {
     $(".notFound").append(`
-      <img src="../images/notFound.jpg">
-      <p class="notFound-text">검색한 내용이 존재하지 않습니다.</p>
+      <img src="../images/notFound.png">
+      <h4>검색결과가 없습니다.</h4>
+      <p class="notFound-text">다른 검색어를 시도해 보시거나  검색 필터를 삭제하세요.</p>
     `);
   } else {
     $("#video-list").empty();
