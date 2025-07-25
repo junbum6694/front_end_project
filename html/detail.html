@@ -19,6 +19,7 @@
 
     <main class="row">
       <div class="col-lg-9 col-md-12">
+        <!-- 영상 -->
         <section id="video-section" class="row m-4 pt-3">
           <div class="col-12 p-0">
             <div class="ratio ratio-16x9">
@@ -63,6 +64,7 @@
             </div>
           </div>
         </section>
+        <!-- 정보 -->
         <section id="info-section" class="m-0">
           <div id="info-container" class="p-2">
             <span class="info-text1" id="visitor">조회수</span>
@@ -70,6 +72,9 @@
             <p id="info-text2" class="mt-2">설명 쭉~</p>
           </div>
         </section>
+        <!-- md,sm 상태 영상 목록 -->
+        <section id="mdsm-side-list" class="row d-lg-none m-4 vh-50"></section>
+        <!-- 댓글 -->
         <section id="comment-section" class="row m-4">
           <h4 id="comment-cnt" class="col-12 ps-0 pt-3 mb-4">댓글 19</h4>
           <div class="comment-container d-flex align-items-center col-12 ps-0 pb-4 mb-4">
@@ -94,15 +99,47 @@
               </div>
 
               <div class="comment mb-0 col-12">
-                <span>작성자 id</span><br />
-                <span>이런 저런 내용의 댓글들 테스트를 위해 작성한 내용입니다. 이걸 반복문으로 넣을겁니다.</span>
+                <span>제작자</span><br />
+                <span>영상 별 댓글 데이터를 만들고자 하였으나</span>
+              </div>
+            </div>
+            <div class="comment-container d-flex align-items-center col-12 pb-4 mb-4">
+              <div class="comment-image">
+                <img src="../images/profile.png" id="commenter-profile" alt="프로필 이미지" width="40" height="40" class="d-inline-block align-text-top me-3 rounded-circle" />
+              </div>
+
+              <div class="comment mb-0 col-12">
+                <span>제작자</span><br />
+                <span>영상 개수 X 댓글 수 만큼을 만드려고 하니</span>
+              </div>
+            </div>
+            <div class="comment-container d-flex align-items-center col-12 pb-4 mb-4">
+              <div class="comment-image">
+                <img src="../images/profile.png" id="commenter-profile" alt="프로필 이미지" width="40" height="40" class="d-inline-block align-text-top me-3 rounded-circle" />
+              </div>
+
+              <div class="comment mb-0 col-12">
+                <span>제작자</span><br />
+                <span>양이 너무 많아 고정된 댓글로 대체합니다...ㅠ</span>
+              </div>
+            </div>
+
+            <div class="comment-container d-flex align-items-center col-12 pb-4 mb-4">
+              <div class="comment-image">
+                <img src="../images/profile.png" id="commenter-profile" alt="프로필 이미지" width="40" height="40" class="d-inline-block align-text-top me-3 rounded-circle" />
+              </div>
+
+              <div class="comment mb-0 col-12">
+                <span>제작자</span><br />
+                <span>댓글 작성은 가능합니다!</span>
               </div>
             </div>
           </div>
         </section>
       </div>
-      <div class="col-lg-3 col-md-0 right-section">
-        <section id="side-list" class="vh-100"></section>
+      <!-- 우측 영상 목록 -->
+      <div class="col-lg-3 d-none d-lg-block right-section">
+        <section id="lg-side-list" class="vh-100"></section>
       </div>
     </main>
 

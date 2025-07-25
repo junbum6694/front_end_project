@@ -31,10 +31,10 @@ const id = params.get("id");
 const matched = videos.find((video) => video.id == id);
 const creator = creators.find((creator) => creator.name == matched.author);
 
-// 현재 영상 제외 list Load 함수
-function videoLoad(video) {
+// side-list Load 함수1
+function videoLoad1(video) {
   const diff = calculateDate(video.date);
-  $("#side-list").append(`
+  $("#lg-side-list").append(`
 <div class="row side-list-container" data-id="${video.id}">
   <div class="col-4 p-0">
     <div class="">
@@ -50,14 +50,42 @@ function videoLoad(video) {
     </p>
   </div>
 </div>
-  `);
+    `);
+}
+
+// side-list Load 함수2
+function videoLoad2(video) {
+  const diff = calculateDate(video.date);
+  $("#mdsm-side-list").append(`
+  <div class="round col-sm-12 col-md-6 col-lg-3 mb-4">
+      <div class="card h-90" data-id="${video.id}">
+          <img class="thumbnail" src="${video.thumbnail}" />
+          <div class="card-body d-flex">
+              <div class="img-box">
+                  <img src="../images/${video.author + ".png"}" id="author" alt="프로필 이미지" width="40" height="40" class="d-inline-block align-text-top me-3 rounded-circle" />
+              </div>
+              <div class="text-box position-relative w-100">
+                  <h5 class="card-title">${video.title}</h5>
+                  <p class="card-text">${video.author}</p>
+                  <div class="bottom d-flex position-absolute bottom-0 w-100">
+                    <span class="card-text">조회수 ${video.visitor}</span>
+                    <span class="card-text text ms-auto">${diff}</span>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+    `);
 }
 
 //우측 영상 목록 Load
 $(document).ready(function () {
   const notMatchedVideo = videos.filter((v) => v.id != id);
   for (const video of notMatchedVideo) {
-    videoLoad(video);
+    videoLoad1(video);
+  }
+  for (const video of notMatchedVideo) {
+    videoLoad2(video);
   }
 });
 
@@ -70,20 +98,22 @@ $(document).on("click", ".side-list-container", function () {
 $("#video").attr("src", matched.url);
 $("#video-title").text(matched.title);
 $("#author-profile").attr("src", "../images/" + matched.author + ".png");
+$("#commenter-profile").attr("src", "../images/" + authentication.nickname + ".png");
 $("#author-name").text(matched.author);
 $("#subscriber").text("구독자 " + creator.subscriber);
-$("#visitor").text(matched.visitor);
+$("#visitor").text("조회수 " + matched.visitor);
 $("#time").text(calculateDate(matched.date));
 $("#info-text2").html(matched.info);
 
+//댓글 작성 함수
 function writeComment(comment) {
   $("#comment-list").prepend(`
-<div class="comment-container d-flex align-items-center col-10 pb-4 mb-4">
+<div class="comment-container d-flex align-items-center col-12 pb-4 mb-4">
     <div class="comment-image">
         <img src="${authentication.profile}" id="commenter-profile" alt="프로필 이미지" width="40" height="40" class="d-inline-block align-text-top me-3 rounded-circle" />
     </div>
 
-    <div class="comment mb-0 col-11">
+    <div class="comment mb-0 col-12">
         <span>${authentication.nickname}</span><br />
         <span>${comment}</span>
     </div>
@@ -94,6 +124,7 @@ function writeComment(comment) {
   `);
 }
 
+//댓글 작성
 $("#comment-form").on("submit", function (e) {
   e.preventDefault();
 
