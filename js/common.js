@@ -204,16 +204,42 @@ fetch("common.html")
     $("#profile-name").text(authentication.nickname);
 
     //사이드바 아이콘 활성화/비활성화
+    const savedTheme = localStorage.getItem("theme");
     let pageName = location.pathname.split("/").pop().split(".")[0]; // 페이지 이름 가져오기
-    if (pageName === "main") {
-      $(".icon[data-ad='main']").attr("src", "../images/home2.png");
-      $(".icon[data-ad='subscribe']").attr("src", "../images/sub1.png");
-    } else if (pageName === "subscribe") {
-      $(".icon[data-ad='main']").attr("src", "../images/home1.png");
-      $(".icon[data-ad='subscribe']").attr("src", "../images/sub2.png");
-    } else if (pageName === "detail") {
-      $(".icon[data-ad='main']").attr("src", "../images/home1.png");
-      $(".icon[data-ad='subscribe']").attr("src", "../images/sub1.png");
+
+    switch (savedTheme) {
+      case "light":
+        $("#theme-btn").text("테마 : Light Mode");
+        $("#logo").attr("src", "../images/youtube light.png");
+        $(".icon[data-ad='youtubeMusic']").attr("src", "../images/youtubeMusic.png");
+        $(".icon[data-ad='offlineSave']").attr("src", "../images/offlineSave.png");
+        if (pageName === "main") {
+          $(".icon[data-ad='main']").attr("src", "../images/home2.png");
+          $(".icon[data-ad='subscribe']").attr("src", "../images/sub1.png");
+        } else if (pageName === "subscribe") {
+          $(".icon[data-ad='main']").attr("src", "../images/home1.png");
+          $(".icon[data-ad='subscribe']").attr("src", "../images/sub2.png");
+        } else if (pageName === "detail") {
+          $(".icon[data-ad='main']").attr("src", "../images/home1.png");
+          $(".icon[data-ad='subscribe']").attr("src", "../images/sub1.png");
+        }
+        break;
+      case "dark":
+        $("#theme-btn").text("테마 : Dark Mode");
+        $("#logo").attr("src", "../images/youtube dark.png");
+        $(".icon[data-ad='youtubeMusic']").attr("src", "../images/youtubeMusic dark.png");
+        $(".icon[data-ad='offlineSave']").attr("src", "../images/offlineSave dark.png");
+        if (pageName === "main") {
+          $(".icon[data-ad='main']").attr("src", "../images/home2 dark.png");
+          $(".icon[data-ad='subscribe']").attr("src", "../images/sub1 dark.png");
+        } else if (pageName === "subscribe") {
+          $(".icon[data-ad='main']").attr("src", "../images/home1 dark.png");
+          $(".icon[data-ad='subscribe']").attr("src", "../images/sub2 dark.png");
+        } else if (pageName === "detail") {
+          $(".icon[data-ad='main']").attr("src", "../images/home1 dark.png");
+          $(".icon[data-ad='subscribe']").attr("src", "../images/sub1 dark.png");
+        }
+        break;
     }
   });
 
@@ -230,5 +256,25 @@ $(document).on("submit", "#search-form", function (e) {
     alert("검색어를 입력하세요.");
   } else {
     location.href = `main.html?keyword=${keyword}`;
+  }
+});
+
+//------------------------------------Dark Mode----------------------------------------------------------
+$(document).on("click", "#theme-btn", function () {
+  const isDark = document.body.classList.toggle("dark-mode");
+  localStorage.setItem("theme", isDark ? "dark" : "light");
+  location.reload();
+});
+
+// 페이지 로드 시 지정된 테마 적용
+$(document).ready(function () {
+  const savedTheme = localStorage.getItem("theme");
+  if (savedTheme === "dark") {
+    document.body.classList.add("dark-mode");
+  } else {
+     if(savedTheme === null){
+        localStorage.setItem("theme", "light");
+      }
+    document.body.classList.remove("dark-mode");
   }
 });
