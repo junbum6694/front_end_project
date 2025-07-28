@@ -110,7 +110,7 @@ function writeComment(comment) {
   $("#comment-list").prepend(`
 <div class="comment-container d-flex align-items-center col-12 pb-4 mb-4">
     <div class="comment-image">
-        <img src="${authentication.profile}" id="commenter-profile" alt="프로필 이미지" width="40" height="40" class="d-inline-block align-text-top me-3 rounded-circle" />
+        <img src="${authentication.profile}" alt="프로필 이미지" width="40" height="40" class="commenter-profile d-inline-block align-text-top me-3 rounded-circle" />
     </div>
 
     <div class="comment mb-0 col-12">
