@@ -255,7 +255,7 @@ $(document).on("submit", "#search-form", function (e) {
   if (keyword === "") {
     alert("검색어를 입력하세요.");
   } else {
-    location.href = `main.html?keyword=${keyword}`;
+    location.href = `index.html?keyword=${keyword}`;
   }
 });
 

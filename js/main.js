@@ -72,7 +72,7 @@ function loadSearchList(keyword) {
       }
     }
     if ($("#video-list").children().length === 0) {
-      location.href = "main.html?keyword=notFoundData";
+      location.href = "index.html?keyword=notFoundData";
     }
   }
 }
