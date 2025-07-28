@@ -1,6 +1,7 @@
-## Front-end-Project(YouTube Clone)
+# youtube_clone_project
 
-기초 웹 프론트엔드 기술을 기반으로 제작한 유튜브 클론 웹사이트입니다. 실제 유튜브의 주요 UI 요소와 반응형 레이아웃을 HTML/CSS/JavaScript만으로 구현하였습니다.
+기초 웹 프론트엔드 기술을 기반으로 제작한 유튜브 클론 웹사이트입니다.  
+실제 유튜브의 주요 UI 요소와 반응형 레이아웃을 HTML/CSS/JavaScript만으로 구현하였습니다.
 
 ## 2. 👩‍💻 프로젝트 개요
 
@@ -21,7 +22,7 @@
 
 
 - 배포 주소
-  - #
+  - https://junbum6694.github.io/
 - 시연 영상
   - #
 - 프로젝트 타임라인
@@ -38,40 +39,46 @@
 
 (아래와 같이 간단하게도 표현 가능하고, gif 를 넣어 직관적으로 표현도 가능합니다.)
 
-| 기능 | 설명 |
-| --- | --- |
-| 홈 화면 | 썸네일, 제목, 채널명, 조회수 표시 |
-| 영상 상세 | videoId 쿼리로 이동, iframe 임베딩 |
-| 반응형 메뉴 | 메뉴 토글 및 아이콘 반응 구현 |
-| 검색 바 (추가 구현 시) | 유사 키워드에 따른 필터링 기능 |
+| 기능          | 설명                                    |
+|-------------|---------------------------------------|
+| 홈 화면        | 썸네일, 제목, 채널명, 조회수 표시                  |
+| 검색 바        | 검색어를 포함하는 영상 필터링 기능                   |
+| 프로필 Dropdown | 프로필 클릭 시 Dropdown                     |
+| Dropdown 테마 | Light 모드와 Dark 모드 테마 변경 가능            |
+| 영상 상세       | Id=(비디오ID) 쿼리로 이동, iframe 임베딩         |
+| 댓글          | 댓글 작성 및 삭제 (저장X 새로고침 시 사라짐)           |
+| 우측 영상 목록    | 현재 영상 제외한 목록 표시, 반응형으로 ui 변경 및 위치 조정  |
+| 구독 화면       | 구독한 Creator의 정보와 해당 Creator가 올린 영상 목록 표시 |
 
 ## 🧱 폴더 구조
 
-📁 FRONT_END_PROJECT
-├── 📁 css
-│   ├── common.css
-│   ├── detail.css
-│   ├── main.css
-│   └── subscribe.css
-├── 📁 html
-│   ├── common.html
-│   ├── detail.html
-│   ├── main.html
-│   └── subscribe.html
-├── 📁 images
-│   └── (총 17개 이미지 파일 포함)
-├── 📁 js
-│   ├── common.js
-│   ├── detail.js
-│   ├── main.js
-│   └── subscribe.js
+📁 FRONT_END_PROJECT  
+├── index.html  
+├── 📁 css  
+│   ├── common.css  
+│   ├── detail.css  
+│   ├── main.css  
+│   └── subscribe.css  
+├── 📁 html  
+│   ├── common.html  
+│   ├── detail.html  
+│   ├── main.html  
+│   └── subscribe.html  
+├── 📁 images  
+│   └── (총 17개 이미지 파일 포함)  
+├── 📁 js  
+│   ├── common.js  
+│   ├── detail.js  
+│   ├── main.js  
+│   └── subscribe.js  
 
 ## 🎯 문제 상황 및 해결 방법
--상세페이지 반응형 진행시 댓글이 재생목록 아래로 가는 현상
+- 상세페이지 반응형 진행시 댓글이 재생목록 아래로 가는 현상
     - **문제 상황**: 큰 화면 기준으로 ui를 작성했더니 작은 화면에서 실제 youtube와 순서가 다르게 출력.
     - **원인 분석**: 반응형으로 작성한다고 순서가 바뀌지 않음.
     - **해결 방법**: 기존의 list를 큰 화면에서만 보이도록 수정하고 중간,작은 화면에서만 보이는 새로은 section을 만들어 해결.
     
+
 - header와 aside 를 include 하는 방법으로 변경 후 기능이 작동하지 않음.
     - **문제 상황**: javaScript로 작성한 데이터를 넣는 기능이 동작하지 않음.
     - **원인 분석**: include가 비동기적으로 실행되기 때문에 데이터를 넣는 javaScript가 동작할 때 해당하는 DOM 요소가 없어서 작동하지 않음.
