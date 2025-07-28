@@ -11,7 +11,7 @@
           <!-- 로고 -->
           <div class="col-lg-4 col-md-4 col-sm-6">
             <a class="navbar-brand" href="main.html">
-              <img src="../images/youtube_logo.webp" alt="Logo" width="170" height="40" class="d-inline-block align-text-top ms-3" />
+              <img id="logo" src="../images/youtube light.png" alt="Logo" width="170" height="40" class="d-inline-block align-text-top ms-3" />
             </a>
           </div>
           <!-- 검색창 -->
@@ -19,7 +19,7 @@
             <form id="search-form">
               <div class="input-group rounded-pill border overflow-hidden">
                 <input type="text" class="form-control border-0" placeholder="검색" id="search-input" />
-                <button type="submit" class="btn bg-white border-0" id="search-btn">
+                <button type="submit" class="btn border-0" id="search-btn">
                   <i class="bi bi-search"></i>
                 </button>
               </div>
@@ -57,7 +57,7 @@
 
                 <li><hr class="dropdown-divider" /></li>
                 <li><a class="dropdown-item" href="#">YouTube의 내 데이터</a></li>
-                <li><a class="dropdown-item" href="#">디자인: 기기 테마</a></li>
+                <li><a id="theme-btn" class="dropdown-item" href="#">테마: Light</a></li>
                 <li><a class="dropdown-item" href="#">언어: 한국어</a></li>
                 <li><a class="dropdown-item" href="#">제한 모드: 사용 안함</a></li>
                 <li><a class="dropdown-item" href="#">위치: 한국</a></li>
@@ -76,20 +76,20 @@
 
     <!-- Aside -->
     <aside class="">
-      <button data-ad="main" class="side-btn btn btn-light border-0">
+      <button data-ad="main" class="side-btn btn border-0">
         <img class="icon" src="../images/home2.png" data-ad="main" />
         <p class="mb-0">home</p>
       </button>
-      <button data-ad="subscribe" class="side-btn btn btn-light border-0">
+      <button data-ad="subscribe" class="side-btn btn border-0">
         <img class="icon" src="../images/sub1.png" data-ad="subscribe" />
         <p class="mb-0">구독</p>
       </button>
-      <button data-ad="#" class="side-btn btn btn-light border-0">
-        <img class="icon" src="../images/youtubeMusic.png" />
+      <button data-ad="#" class="side-btn btn border-0">
+        <img class="icon" src="../images/youtubeMusic.png" data-ad="youtubeMusic" />
         <p class="mb-0">youtube music</p>
       </button>
-      <button data-ad="#" class="side-btn btn btn-light border-0">
-        <img class="icon" src="../images/offlineSave.png" />
+      <button data-ad="#" class="side-btn btn border-0">
+        <img class="icon" src="../images/offlineSave.png" data-ad="offlineSave" />
         <p class="mb-0">offline save</p>
       </button>
     </aside>

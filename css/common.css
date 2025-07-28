@@ -95,3 +95,89 @@ footer {
   align-items: center;
   justify-content: center;
 }
+
+/* ----------------------------Dark thema------------------------------ */
+body.dark-mode {
+  background-color: #181818;
+  color: #f1f1f1;
+}
+
+/* ------- navbar (Dark) -------*/
+body.dark-mode .navbar {
+  background-color: #2c2c2c !important;
+  border: none !important;
+}
+
+/* 검색창 input (Dark) */
+body.dark-mode #search-input {
+  background-color: #444;
+  color: #f1f1f1;
+  border: none;
+}
+
+/* input placeholder (Dark) */
+body.dark-mode #search-input::placeholder {
+  color: #aaaaaa;
+}
+
+/* 검색 버튼 (Dark) */
+body.dark-mode #search-btn {
+  background-color: #444;
+  color: #ffffff;
+}
+
+/* 검색창 전체 input-group (Dark) */
+body.dark-mode #search-form .input-group {
+  border: 1px solid #444;
+  background-color: #2a2a2a;
+}
+
+/* dropdown CSS (Dark) */
+body.dark-mode .dropdown-menu {
+  background-color: #2e2e2e;
+  color: #ffffff;
+}
+body.dark-mode .dropdown-item {
+  color: #dddddd;
+}
+body.dark-mode .dropdown-item:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* ------- aside CSS (Dark) ------- */
+body.dark-mode aside {
+  background-color: #2c2c2c !important;
+  border: none !important;
+}
+
+/* aside button CSS (Dark) */
+body.dark-mode .side-btn {
+  background-color: #2c2c2c !important;
+  color: #eeeeee !important;
+}
+
+body.dark-mode .side-btn:hover {
+  background-color: #2c2c2c !important;
+  color: #eeeeee !important;
+  border: 1px solid white !important;
+}
+
+/* card CSS (Dark) */
+body.dark-mode .card-container {
+  border-bottom: 1px solid #2c2c2c;
+}
+
+body.dark-mode .card {
+  background-color: #2a2a2a;
+  color: #f1f1f1;
+  border-color: #444;
+}
+
+body.dark-mode .card .card-title,
+body.dark-mode .card .card-text {
+  color: #f1f1f1;
+}
+
+body.dark-mode .card .bottom .text {
+  color: #bbbbbb;
+}
