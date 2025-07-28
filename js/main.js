@@ -87,6 +87,10 @@ $(document).ready(function () {
     }
   } else {
     loadSearchList(keyword);
-    $("#search-input").val(keyword);
+    if(keyword != "notFoundData"){
+      setTimeout(function () {
+        $("#search-input").val(keyword);
+      }, 10);
+    }
   }
 });
