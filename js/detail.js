@@ -103,6 +103,7 @@ $("#author-name").text(matched.author);
 $("#subscriber").text("구독자 " + creator.subscriber);
 $("#visitor").text("조회수 " + matched.visitor);
 $("#time").text(calculateDate(matched.date));
+$("#time2").text(matched.date);
 $("#info-text2").html(matched.info);
 
 //댓글 작성 함수
