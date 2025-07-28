@@ -22,7 +22,7 @@
 
 
 - 배포 주소
-  - https://junbum6694.github.io/
+  - https://junbum6694.github.io/youtube_clone_project/
 - 시연 영상
   - #
 - 프로젝트 타임라인
