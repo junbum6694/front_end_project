@@ -213,7 +213,7 @@ fetch("common.html")
         $("#logo").attr("src", "../images/youtube light.png");
         $(".icon[data-ad='youtubeMusic']").attr("src", "../images/youtubeMusic.png");
         $(".icon[data-ad='offlineSave']").attr("src", "../images/offlineSave.png");
-        if (pageName === "main") {
+        if (pageName === "index") {
           $(".icon[data-ad='main']").attr("src", "../images/home2.png");
           $(".icon[data-ad='subscribe']").attr("src", "../images/sub1.png");
         } else if (pageName === "subscribe") {
@@ -229,7 +229,7 @@ fetch("common.html")
         $("#logo").attr("src", "../images/youtube dark.png");
         $(".icon[data-ad='youtubeMusic']").attr("src", "../images/youtubeMusic dark.png");
         $(".icon[data-ad='offlineSave']").attr("src", "../images/offlineSave dark.png");
-        if (pageName === "main") {
+        if (pageName === "index") {
           $(".icon[data-ad='main']").attr("src", "../images/home2 dark.png");
           $(".icon[data-ad='subscribe']").attr("src", "../images/sub1 dark.png");
         } else if (pageName === "subscribe") {
