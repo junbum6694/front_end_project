@@ -34,12 +34,6 @@ function videoLoad(video) {
     <div class="thumbnail-wrapper position-relative w-100">
       <div class="ratio-wrapper" style="padding-top: 56.25%; position: relative;">
         <img class="thumbnail position-absolute top-0 start-0 w-100 h-100" src="${video.thumbnail}" style="object-fit: cover;" />
-        <iframe class="video-frame position-absolute top-0 start-0 w-100 h-100 d-none"
-          src="#"
-          allow="autoplay"
-          frameborder="0"
-          style="object-fit: cover;">
-        </iframe>
       </div>
     </div>
 

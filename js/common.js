@@ -259,24 +259,36 @@ $(document).on("submit", "#search-form", function (e) {
   }
 });
 
-//마우스 올리면 썸네일 이미지로 변경
-let timer = null;
-
+// 마우스를 카드 위에 올렸을 때
 $(document).on("mouseenter", ".card", function () {
-  const iframe = $(this).find(".video-frame");
-  const videoId = $(this).closest(".card").data("id");
-  timer = setTimeout(function () {
-    iframe.attr("src", `https://www.youtube.com/embed/${videoId}?autoplay=1&mute=1`).removeClass("d-none");
-    $(this).find(".thumbnail").addClass("d-none");
-  }, 1000);
-});
+  const card = $(this);
+  const videoId = card.data("id");
 
-//마우스 떨어지면 다시 이미지로 변경
-$(document).on("mouseleave", ".thumbnail-wrapper", function () {
-  clearTimeout(timer);
-  const iframe = $(this).find(".video-frame");
-  iframe.attr("src", "").addClass("d-none");
-  $(this).find(".thumbnail").removeClass("d-none");
+  if (card.data("hover-timer")) return;
+
+  const timerId = setTimeout(function () {
+    card.find(".ratio-wrapper").append(`
+      <iframe class="video-frame position-absolute top-0 start-0 w-100 h-100"
+        src="https://www.youtube.com/embed/${videoId}?autoplay=1&mute=1"
+        allow="autoplay"
+        frameborder="0"
+        style="object-fit: cover;">
+      </iframe>
+    `);
+    card.find("img").addClass("d-none");
+    card.removeData("hover-timer");
+  }, 1000);
+
+  card.data("hover-timer", timerId);
+});
+//마우스 카드에서 떨어뜨릴 때
+$(document).on("mouseleave", ".card", function () {
+  const card = $(this);
+  clearTimeout(card.data("hover-timer"));
+  card.removeData("hover-timer");
+
+  card.find("iframe").remove();
+  card.find("img").removeClass("d-none");
 });
 
 //------------------------------------Dark Mode----------------------------------------------------------
