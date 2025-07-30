@@ -29,22 +29,35 @@ function videoLoad(video) {
   const diff = calculateDate(video.date);
   $(`.video-list[data-name='${video.author}']`).append(`
 <div class="round col-sm-12 col-md-6 col-lg-3 mb-4">
-    <div class="card h-100" data-id="${video.id}">
-        <img class="thumbnail" src="${video.thumbnail}" />
-        <div class="card-body d-flex">
-            <div class="img-box">
-                <img src="../images/${video.author + ".png"}" id="author" alt="프로필 이미지" width="40" height="40" class="d-inline-block align-text-top me-3 rounded-circle" />
-            </div>
-            <div class="text-box position-relative w-100">
-                <h5 class="card-title">${video.title}</h5>
-                <p class="card-text">${video.author}</p>
-                <div class="bottom d-flex position-absolute bottom-0 w-100">
-                  <span class="card-text">조회수 ${video.visitor}</span>
-                  <span class="card-text text ms-auto">${diff}</span>
-                </div>
-            </div>
-        </div>
+  <div class="card h-100" data-id="${video.id}">
+    
+    <div class="thumbnail-wrapper position-relative w-100">
+      <div class="ratio-wrapper" style="padding-top: 56.25%; position: relative;">
+        <img class="thumbnail position-absolute top-0 start-0 w-100 h-100" src="${video.thumbnail}" style="object-fit: cover;" />
+        <iframe class="video-frame position-absolute top-0 start-0 w-100 h-100 d-none"
+          src="#"
+          allow="autoplay"
+          frameborder="0"
+          style="object-fit: cover;">
+        </iframe>
+      </div>
     </div>
+
+    <div class="card-body d-flex">
+      <div class="img-box">
+        <img src="../images/${video.author + ".png"}" id="author" alt="프로필 이미지"
+          width="40" height="40" class="d-inline-block align-text-top me-3 rounded-circle" />
+      </div>
+      <div class="text-box position-relative w-100">
+        <h5 class="card-title">${video.title}</h5>
+        <p class="card-text">${video.author}</p>
+        <div class="bottom d-flex position-absolute bottom-0 w-100">
+          <span class="card-text">조회수 ${video.visitor}</span>
+          <span class="card-text text ms-auto">${diff}</span>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
   `);
 }

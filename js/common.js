@@ -259,6 +259,26 @@ $(document).on("submit", "#search-form", function (e) {
   }
 });
 
+//마우스 올리면 썸네일 이미지로 변경
+let timer = null;
+
+$(document).on("mouseenter", ".card", function () {
+  const iframe = $(this).find(".video-frame");
+  const videoId = $(this).closest(".card").data("id");
+  timer = setTimeout(function () {
+    iframe.attr("src", `https://www.youtube.com/embed/${videoId}?autoplay=1&mute=1`).removeClass("d-none");
+    $(this).find(".thumbnail").addClass("d-none");
+  }, 1000);
+});
+
+//마우스 떨어지면 다시 이미지로 변경
+$(document).on("mouseleave", ".thumbnail-wrapper", function () {
+  clearTimeout(timer);
+  const iframe = $(this).find(".video-frame");
+  iframe.attr("src", "").addClass("d-none");
+  $(this).find(".thumbnail").removeClass("d-none");
+});
+
 //------------------------------------Dark Mode----------------------------------------------------------
 $(document).on("click", "#theme-btn", function () {
   const isDark = document.body.classList.toggle("dark-mode");
@@ -272,9 +292,9 @@ $(document).ready(function () {
   if (savedTheme === "dark") {
     document.body.classList.add("dark-mode");
   } else {
-     if(savedTheme === null){
-        localStorage.setItem("theme", "light");
-      }
+    if (savedTheme === null) {
+      localStorage.setItem("theme", "light");
+    }
     document.body.classList.remove("dark-mode");
   }
 });
