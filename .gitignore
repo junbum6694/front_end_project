@@ -1,0 +1,4 @@
+/.prettierrc
+/.idea/git_toolbox_prj.xml
+/.idea/prettier.xml
+!/.gitignore
